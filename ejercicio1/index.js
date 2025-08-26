@@ -1,6 +1,8 @@
 
 const img = document.querySelector(".character-image");
 const div = document.getElementById("img-container");
+const characterName = document.getElementById("character-name");
+const characterHouse = document.getElementById("character-house");
 const select = document.getElementById("character-list");
 const defaultOption = document.createElement("option");
 defaultOption.textContent = "-- Selecciona un personaje --";
@@ -32,6 +34,9 @@ const crearSelect = async () => {
     select.addEventListener("change", (input) => {
         const personaje = gotCharacters.find(char => char.fullName === input.target.value);
         img.src = personaje.imageUrl;
+        characterName.innerHTML = personaje.fullName;
+        characterHouse.innerHTML = personaje.family;
+
     });
 };
 
