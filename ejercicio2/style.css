@@ -15,8 +15,8 @@ body {
 }
 
 img {
-    width: 50%;
-    height: 50%;
+    width: 400px;
+    height: 450px;
     border: 2px black solid;
     background-color: antiquewhite;
 }
